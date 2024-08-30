@@ -9,6 +9,18 @@ import Contact from './pages/Contact';
 import ProductDetail from './pages/ProductDetail';
 import { useDispatch } from 'react-redux';
 import { setProducts } from './actions/productActions';
+import katok from './assets/images/katok.png'
+import avtokran from './assets/images/avtokran.png'
+import eskavator from './assets/images/eskavator.png'
+import nasos from './assets/images/nasos.png'
+import pagruzchik from './assets/images/pagruzchik.png'
+import avtovishka from './assets/images/avtovishka.png'
+import manikulyator from './assets/images/manikulyator.png'
+import buldozer from './assets/images/buldozer.png'
+import yamobur from './assets/images/yamobur.jpg'
+
+
+
 
 function App() {
   const dispatch = useDispatch();
@@ -18,36 +30,72 @@ function App() {
     const products = [
       {
         id: 1,
-        name: 'Product 1',
-        image: '../public/images/craners.png',
+        name: 'Катки',
+        image: katok,
         shortDescription: 'Brief description of Product 1.',
         description: 'Detailed description of Product 1.',
         price: '$100',
       },
       {
         id: 2,
-        name: 'Product 2',
-        image: '../public/images/craners.png',
+        name: 'Автобетононасос',
+        image: nasos,
         shortDescription: 'Brief description of Product 2.',
         description: 'Detailed description of Product 2.',
         price: '$150',
       },
       {
         id: 3,
-        name: 'Product 1',
-        image: '../../public/images/craners.png',
+        name: 'Автокраны',
+        image: avtokran,
         shortDescription: 'Brief description of Product 1.',
         description: 'Detailed description of Product 1.',
         price: '$100',
       },
       {
         id: 4,
-        name: 'Product 2',
-        image: '../public/images/craners.png',
+        name: 'Экскаваторы',
+        image: eskavator,
+        shortDescription: 'Brief description of Product 2.',
+        description: 'Detailed description of Product 2.',
+        price: '$150',
+      },{
+        id: 5,
+        name: 'Погрузчики',
+        image: pagruzchik,
+        shortDescription: 'Brief description of Product 2.',
+        description: 'Detailed description of Product 2.',
+        price: '$150',
+      },{
+        id: 6,
+        name: 'Автовышки',
+        image: avtovishka,
+        shortDescription: 'Brief description of Product 2.',
+        description: 'Detailed description of Product 2.',
+        price: '$150',
+      },{
+        id: 7,
+        name: 'Манипуляторы',
+        image: manikulyator,
+        shortDescription: 'Brief description of Product 2.',
+        description: 'Detailed description of Product 2.',
+        price: '$150',
+      },{
+        id: 8,
+        name: 'Бульдозеры',
+        image: buldozer,
+        shortDescription: 'Brief description of Product 2.',
+        description: 'Detailed description of Product 2.',
+        price: '$150',
+      },{
+        id: 9,
+        name: 'Ямобуры',
+        image: yamobur,
         shortDescription: 'Brief description of Product 2.',
         description: 'Detailed description of Product 2.',
         price: '$150',
       },
+      
       // Add more products as needed
     ];
 

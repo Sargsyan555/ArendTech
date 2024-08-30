@@ -1,0 +1,96 @@
+
+.slider-container {
+    display: flex;
+    height: 70vh;
+    /* background-image: url('https://via.placeholder.com/800x600); Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-content {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.text-content > * {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: text-rise 1s ease-out forwards;
+}
+
+.text-content .phone-number {
+    animation-delay: 0.5s;
+    font-size: 1.2rem;
+    color: #333;
+    font-size: 50px;
+}
+
+.text-content h1 {
+    animation-delay: 1.5s;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.text-content h2 {
+    animation-delay: 2.5s;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+@keyframes text-rise {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .slider-container {
+        flex-direction: column;
+    }
+
+    .slider-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .forminHead {
+        display: none; /* Hide form on mobile */
+    }
+}
+.dots-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#007BFF 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+    animation: move-dots 20s linear infinite;
+}
+
+@keyframes move-dots {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
