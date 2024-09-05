@@ -2,7 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
+import Nav from '../components/Nav';
 function ProductDetail() {
   const { id } = useParams();
   const product = useSelector(state =>
@@ -14,12 +14,16 @@ function ProductDetail() {
   }
 
   return (
+    <>
+    <Nav />
     <div className="product-detail">
+
       <h1>{product.name}</h1>
       <img src={product.image} alt={product.name} />
       <p>{product.description}</p>
       <p><strong>Price:</strong> {product.price}</p>
     </div>
+    </>
   );
 }
 

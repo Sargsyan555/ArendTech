@@ -5,8 +5,15 @@ import { useSelector } from 'react-redux';
 import './styles/Category.css';
 
 function ProductCard({ productId }) {
-  const product = useSelector(state =>
-    state.products.products.find(p => p.id === productId)
+  console.log(productId);
+  
+  const product = useSelector(state =>{
+    if(productId[1] === "shinanyut"){
+      return state.shinanyut.find(p => p.id === productId[0])
+    }else{
+      return state.texnika.find(p => p.id === productId[0])
+    }
+  }
   );
 
   if (!product) return null;
