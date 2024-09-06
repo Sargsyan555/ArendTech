@@ -1,13 +1,16 @@
-// src/pages/ProductDetail.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Nav from '../components/Nav';
+import './styles/ProductDetail.css';
+
 function ProductDetail() {
-  const { id } = useParams();
-  const product = useSelector(state =>
-    state.products.products.find(p => p.id === parseInt(id))
-  );
+  const  param  = useParams();
+  const id = param.id;
+  
+
+  const products = useSelector(state => state[param.category]);
+  
+  const product = products.find(p => p.id === parseInt(id));
 
   if (!product) {
     return <p>Product not found!</p>;
@@ -15,14 +18,12 @@ function ProductDetail() {
 
   return (
     <>
-    <Nav />
-    <div className="product-detail">
-
-      <h1>{product.name}</h1>
-      <img src={product.image} alt={product.name} />
-      <p>{product.description}</p>
-      <p><strong>Price:</strong> {product.price}</p>
-    </div>
+      <div className="product-detail" id='content'>
+        <h1>{product.name}</h1>
+        <img src={product.image} alt={product.name} />
+        <p>{product.description}</p>
+        <p><strong>Price:</strong> {product.price}</p>
+      </div>
     </>
   );
 }

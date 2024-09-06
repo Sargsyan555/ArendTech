@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import './styles/Category.css';
 
 function ProductCard({ productId }) {
-  console.log(productId);
   
   const product = useSelector(state =>{
     if(productId[1] === "shinanyut"){
@@ -20,7 +19,7 @@ function ProductCard({ productId }) {
 
   return (
     <div className="product-card">
-      <Link to={`/product/${product.id}`} className="product-link">
+      <Link to={`/product/${product.id}/${productId[1]}`} className="product-link">
         <div className="product-image">
           <img src={product.image} alt={product.name} />
           <div className="product-info">

@@ -1,11 +1,16 @@
-// src/components/Footer.js
 import React from 'react';
-import '../styles/App.css';
+import './styles/Footer.css';
 
 function Footer() {
   return (
-    <footer className="Footer">
-      <p>&copy; 2024 My Website</p>
+    <footer className="footer">
+      <div className="footer-columns">
+        {/* First Column: Logo and Phone */}
+        <div className="footer-column">
+          <h2 className="footer-logo">ArendaTech</h2>
+          <a href="tel:+1234567890" className="footer-link">📞 +1 234 567 890</a>
+        </div>
+      </div>
     </footer>
   );
 }

@@ -1,109 +1,79 @@
-/* Header.css */
-.header {
-    /* background-color: #fff; */
-    border-bottom: 1px solid #ddd;
+.nav {
+  background-color: black;
+  padding: 0 10px;
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: none; /* Hide by default */
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style for the product list */
+.product-line {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-line li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-line a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  width: 100%;
+  padding: 20px 0;
+  display: block;
+  text-align: center;
+}
+
+.product-line a:hover {
+  background-color: #333;
+}
+
+/* Media query for screens up to 768px */
+@media (max-width: 768px) {
+  .dropdown-toggle {
+    display: block; /* Show the dropdown button */
   }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    /* max-width: 1200px; */
-    margin: 0 auto;
+
+  .product-line {
+    display: none; /* Hide the navigation items */
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: black;
   }
-  
-  .contact-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+
+  .product-line.open {
+    display: flex; /* Show items when dropdown is open */
   }
-  
-  .icon {
-    color: #333333;
-    font-size: 24px;
-    text-decoration: none;
+
+  .product-line a {
+    font-size: 22px;
+    padding: 15px 0;
   }
-  
-  .icon:hover {
-    color: #007bff; /* Change to your preferred hover color */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .product-line a {
+    font-size: 18px;
+    padding: 10px 0;
   }
-  
-  .header-logo img {
-    max-height: 50px;
-  }
-  
-  .header-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-nav li {
-    margin: 0;
-  }
-  
-  .header-nav a {
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-  }
-  
-  .header-nav a:hover {
-    color: #007bff; /* Change to your preferred hover color */
-  }
-  
-  .header-logo a {
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-  }
-  
-  .header-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-nav li {
-    margin: 0;
-  
-  }
-  
-  .header-nav a {
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-  }
-  
-  .header-nav a:hover {
-    color: #007bff; /* Change to your preferred hover color */
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .header-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .contact-info {
-      margin-bottom: 10px;
-    }
-  
-    .header-nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  
+}

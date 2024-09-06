@@ -20,14 +20,15 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <Header />
       <Nav />
-,        <main className="Body">
+        <main className="Body">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-          </Routes>
+            <Route path="/product/:id/:category" element={<ProductDetail />} />
+            </Routes>
         </main>
         <Footer />
       </div>
